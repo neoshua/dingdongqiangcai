@@ -13,8 +13,8 @@ threads.start(function() {
    	id("vp_dialog_select_time_content").findOne().children().forEach(child => {
       var j = 1;
 			var target = child.findOne(id("rv_selected_hour")).children().forEach(timechild => {
-        //默认选择第一个时间段，需要修改其他时间段需要手动  修改，如：选择第二个时间段：j == 2
-        if(j == 1){
+        //默认选择第一个时间段，需要修改其他时间段需要手动  修改，如：选择第二个时间段：j === 2
+        if(j === 1){
           timechild.click()
         }
           j++
